@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+}
+*:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+li {
+  list-style: none;
+  padding: 0;
+}
+
+/* ==========> Container <=========== */
+
+/* --------media screen------------ */
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* ==========> End Container <========*/
+
+body {
+  background-color: #10c085;
+  /* background-image: url("../background.png");
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 10px 30px;
+  position: relative;
+}
+
+.ul-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+.logo span {
+  color: yellow;
+  font-size: 40px;
+}
+
+.logo:hover span {
+  color: white;
+}
+.logo:hover {
+  color: yellow;
+  scale: 1.04;
+}
+
+/* NavBar Number One */
+.nav1 {
+  background-color: cadetblue;
+  color: white;
+  margin-bottom: 300px;
+}
+.ul-nav li:not(:last-child) {
+  margin-right: 20px;
+}
+.nav1 li {
+  font-size: 20px;
+  padding: 5px;
+  transition: 0.3s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav1 li a {
+  transition: 0.3s;
+}
+
+.nav1 .ul-nav li.active {
+  color: yellow;
+  scale: 1.4;
+  font-weight: 800;
+}
+
+.nav1 li.active a {
+  color: yellow;
+  scale: 1.4;
+  font-weight: 900;
+}
+
+.nav1 li a:hover {
+  color: yellow;
+  scale: 1.6;
+}
+
+.nav1 .navbar .toggle-icon {
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Dropdown Menu */
+
+.nav1 .dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 60px;
+  height: 240px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+}
+.nav1 .navbar .toggle-icon i {
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+}
+
+.nav1 .navbar input {
+  position: absolute;
+  top: 24px;
+  right: 50px;
+  display: none;
+}
+.nav1 .navbar input:checked + .toggle-icon {
+  color: yellow;
+}
+.nav1 .navbar input:checked + .dropdown-menu {
+  display: block;
+  animation-name: height-change;
+  animation-duration: 0.7s;
+  animation-timing-function: initial;
+}
+
+@keyframes height-change {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 240px;
+  }
+}
+.nav1 .dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Desgin */
+
+@media (max-width: 992px) {
+  .nav1 .navbar .ul-nav {
+    display: none;
+  }
+  .nav1 .navbar .toggle-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav1 .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+
+/* ================================== NavBar Number Two ==============================*/
+
+.nav2 {
+  background-color: #b5cb99;
+}
+
+.nav2 .logo {
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #186f65;
+}
+.nav2 .logo span {
+  color: #b2533e;
+  font-size: 40px;
+}
+
+.nav2 .logo:hover span {
+  color: #186f65;
+}
+.nav2 .logo:hover {
+  color: #b2533e;
+  scale: 1.04;
+}
+.nav2 .ul-nav {
+  color: #fce09b;
+}
+.nav2 .ul-nav li {
+}
+.nav2 .ul-nav li.active a {
+  color: red;
+  scale: 1.5rem;
+}
+.nav2 .ul-nav li a {
+}
+
+.nav2 .user {
+}
+
+.nav2 .dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 60px;
+  height: 240px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+}
+
+.nav2 .navbar .toggle-icon2 {
+  display: none;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+}
+
+.nav2 .navbar input {
+  position: absolute;
+  top: 24px;
+  right: 50px;
+  display: none;
+}
+.nav2 .navbar input:checked + .toggle-icon2 {
+  color: yellow;
+}
+.nav2 .navbar input:checked + .dropdown-menu {
+  display: block;
+  animation-name: height-change;
+  animation-duration: 0.7s;
+  animation-timing-function: initial;
+}
+
+@media (max-width: 992px) {
+  .nav2 .navbar .ul-nav {
+    display: none;
+  }
+  .nav2 .navbar .toggle-icon2 {
+    display: block;
+  }
+
+  .nav2 .navbar .user {
+    display: none;
+  }
+
+  .nav2 .navbar .dropdown-menu .user {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav2 .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
+}
